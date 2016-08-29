@@ -3,6 +3,13 @@ var router = express.Router();
 var user = require("../controller/user.js");
 var book = require("../controller/book.js");
 
+router.get('/', function(req, res, next) {
+  res.render("index");
+});
+
+router.get('/register', function(req, res, next) {
+  res.render("register");
+});
 
 router.post("/register",user.create);
 

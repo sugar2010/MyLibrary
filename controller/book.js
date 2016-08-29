@@ -32,6 +32,7 @@ module.exports.getBookList=function(req,res){
     bookList.find(function(err,items){
       if(err){res.status(400).json({error:err})}else{
         items.toArray(function(err,itemArr){
+          res.setHeader("Access-Control-Allow-Origin","*");
           res.status(200).json(itemArr);
         });
       }

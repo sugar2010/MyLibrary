@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ 	<head>
+  		<meta charset="UTF-8">
+  		<meta name="Generator" content="EditPlus®">
+  		<meta name="Author" content="">
+  		<meta name="Keywords" content="">
+  		<meta name="Description" content="">
+      <script type="text/javascript" src="jquery.min.js"></script>
+  		<title>Document</title>
+ 	</head>
+ 	<body>
+    <script type="text/javascript">
+      $.get("http://localhost:3000/booklist",function(res){
+        console.log(res);
+        document.getElementById("name1").innerHTML=res[0].name
+        $("#publish1").text(res[0].publisher)
+        $("#ISBN1").text(res[0].ISBN)
+        $("#name2").text(res[1].name)
+        $("#publish2").text(res[1].publisher)
+        $("#ISBN2").text(res[1].ISBN)
+        // body...
+      })
+    </script>
+		<div>
+      <table>
+        <tr>
+          <td id="name1"></td><td id="name2"></td>
+        </tr>
+        <tr>
+          <td id="publish1"></td><td id="publish2"></td>
+        </tr>
+        <tr>
+          <td id="ISBN1"></td><td id="ISBN2"></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </table>  
+    </div>
+ 	</body>
+</html>
+
+<!-- <svg viewBox="0 0 1024 872" y="872" x="1024" overflow="visible" id="svgcontent" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="872" width="1024">
+
+<svg width="314.0625" height="200" viewBox="0 0 314.0625 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> -->
